@@ -9,11 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 
-// app.get("/ping", (req, res) => {
-//   return res.json({
-//     message: "Problem Service is alive",
-//   });
-// });
+// If any request comes and route starts with /api, we map it to apiRouter
 app.use('/api',apiRoutes);
 app.listen(PORT, () => {
   console.log(`Server is connected to PORT: ${PORT}`);
