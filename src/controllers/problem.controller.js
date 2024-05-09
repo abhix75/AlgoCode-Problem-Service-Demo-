@@ -8,30 +8,43 @@ function pingController(req, res) {
 }
 function addProblem(req, res, next) {
   try {
-      // nothing implemented
-      throw new BadRequest('Problem Name', {missing: ["Problem Name"]});
-  } catch(error) {
-      next(error);
-  }}
+    //BadRequest
+    throw new BadRequest('Problem Name', { missing: ["Problem Name"] });
+  } catch (error) {
+    next(error);
+  }
+}
 function getProblem(req, res) {
-  return res.status(StatusCodes.NOT_IMPLEMENTED).json({
-    MESSAGE: "Not Implemented",
-  });
+  try {
+    //NOT-IMplemented
+    throw new NotImplementedError('getProblem');
+  } catch (error) {
+    next(error);
+  }
 }
 function getProblems(req, res) {
-  return res.status(StatusCodes.NOT_IMPLEMENTED).json({
-    MESSAGE: "Not Implemented",
-  });
+  try {
+    //NOT-IMplemented
+    throw new NotImplementedError('getProblems');
+  } catch (error) {
+    next(error);
+  }
 }
 function deleteProblem(req, res) {
-  return res.status(StatusCodes.NOT_IMPLEMENTED).json({
-    MESSAGE: "Not Implemented",
-  });
+  try {
+    //NOT-IMplemented
+    throw new NotImplementedError('deleteProblem');
+  } catch (error) {
+    next(error);
+  }
 }
 function updateProblem(req, res) {
-  return res.status(StatusCodes.NOT_IMPLEMENTED).json({
-    MESSAGE: "Not Implemented",
-  });
+  try {
+    //NOT-IMplemented
+    throw new NotImplementedError('updateProblem');
+  } catch (error) {
+    next(error);
+  }
 }
 
 module.exports = {
